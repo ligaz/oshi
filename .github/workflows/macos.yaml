@@ -35,7 +35,7 @@ jobs:
           distribution: 'zulu'
           cache: 'maven'
       - name: Test with Maven
-        run: ./mvnw clean test -B
+        run: ./mvnw clean test -B -o
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Coverage
